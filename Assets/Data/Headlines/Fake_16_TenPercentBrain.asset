@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc8247ce81924e9192538bcd84ede9b, type: 3}
+  m_Name: Fake_16_TenPercentBrain
+  m_EditorClassIdentifier: 
+  headline: 'Scientists have confirmed that humans only use 10% of their brains.'
+  isReal: 0
+  explanation: 'This is a popular myth. Brain scans show that virtually all parts of the brain are active throughout the day.'
+  sourceHint: 'No credible source found'
+  category: 2

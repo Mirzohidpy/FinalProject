@@ -31,10 +31,10 @@ public class TrueFalseGameManager : MonoBehaviour
     private Coroutine timerCoroutine;
 
     // --- Events (UI listens to these) ---
-    public static event System.Action<HeadlineData, int> OnQuestionShown;     // headline, questionNumber
-    public static event System.Action<float> OnTimerTick;                     // 0..1 normalized
-    public static event System.Action<bool, string, int, int> OnAnswerResult; // correct, explanation, score, streak
-    public static event System.Action<int> OnRoundEnd;                        // final score
+    public static event System.Action<HeadlineData, int, int> OnQuestionShown;     // headline, questionNumber, totalQuestions
+    public static event System.Action<float> OnTimerTick;                          // 0..1 normalized
+    public static event System.Action<bool, string, int, int, int> OnAnswerResult; // correct, explanation, score, streak, streakBonus
+    public static event System.Action<int> OnRoundEnd;                             // final score
 
     void Start()
     {
@@ -83,7 +83,7 @@ public class TrueFalseGameManager : MonoBehaviour
         }
 
         HeadlineData headline = roundHeadlines[currentIndex];
-        OnQuestionShown?.Invoke(headline, currentIndex + 1);
+        OnQuestionShown?.Invoke(headline, currentIndex + 1, roundHeadlines.Count);
 
         inputAllowed = true;
 
@@ -109,7 +109,7 @@ public class TrueFalseGameManager : MonoBehaviour
             inputAllowed = false;
             streak = 0;
             HeadlineData current = roundHeadlines[currentIndex];
-            OnAnswerResult?.Invoke(false, current.explanation, score, streak);
+            OnAnswerResult?.Invoke(false, current.explanation, score, streak, 0);
             yield return new WaitForSeconds(explanationDisplayTime);
             currentIndex++;
             ShowNextQuestion();
@@ -130,11 +130,12 @@ public class TrueFalseGameManager : MonoBehaviour
 
         HeadlineData current = roundHeadlines[currentIndex];
         bool correct = (answeredReal == current.isReal);
+        int streakBonus = 0;
 
         if (correct)
         {
             streak++;
-            int streakBonus = streak > 1 ? (streak - 1) * streakBonusMultiplier : 0;
+            streakBonus = streak > 1 ? (streak - 1) * streakBonusMultiplier : 0;
             score += pointsPerCorrect + streakBonus;
         }
         else
@@ -142,7 +143,7 @@ public class TrueFalseGameManager : MonoBehaviour
             streak = 0;
         }
 
-        OnAnswerResult?.Invoke(correct, current.explanation, score, streak);
+        OnAnswerResult?.Invoke(correct, current.explanation, score, streak, streakBonus);
         StartCoroutine(AdvanceAfterDelay());
     }
 
@@ -168,7 +169,15 @@ public class TrueFalseGameManager : MonoBehaviour
 
     public void ReturnToHub()
     {
-        SceneManager.LoadScene("HubScene");
+        if (Application.CanStreamedLevelBeLoaded("HubScene"))
+        {
+            SceneManager.LoadScene("HubScene");
+        }
+        else
+        {
+            Debug.LogWarning("HubScene is not in Build Settings yet. Restarting current scene instead.");
+            RestartGame();
+        }
     }
 
     public void RestartGame()

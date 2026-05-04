@@ -68,7 +68,7 @@ public class TrueFalseUIManager : MonoBehaviour
     // Event handlers
     // -------------------------------------------------------
 
-    void HandleQuestionShown(HeadlineData data, int questionNumber)
+    void HandleQuestionShown(HeadlineData data, int questionNumber, int totalQuestions)
     {
         feedbackPanel.SetActive(false);
         SetButtonsInteractable(true);
@@ -76,7 +76,7 @@ public class TrueFalseUIManager : MonoBehaviour
         headlineText.text = data.headline;
         categoryText.text = data.category.ToString().ToUpper();
         sourceHintText.text = data.sourceHint;
-        questionCounterText.text = $"Question {questionNumber} / 10";
+        questionCounterText.text = $"Question {questionNumber} / {totalQuestions}";
 
         timerSlider.value = 1f;
         timerFill.color = timerColorFull;
@@ -88,7 +88,7 @@ public class TrueFalseUIManager : MonoBehaviour
         timerFill.color = Color.Lerp(timerColorLow, timerColorFull, normalized);
     }
 
-    void HandleAnswerResult(bool correct, string explanation, int score, int streak)
+    void HandleAnswerResult(bool correct, string explanation, int score, int streak, int streakBonus)
     {
         SetButtonsInteractable(false);
 
@@ -96,20 +96,10 @@ public class TrueFalseUIManager : MonoBehaviour
         streakHUDText.text = streak > 1 ? $"x{streak} Streak!" : "";
 
         feedbackPanel.SetActive(true);
-
-        if (!correct && streak == 0)
-        {
-            // Could be time's up or a wrong answer — we differentiate by checking
-            feedbackResultText.text = correct ? "CORRECT!" : "WRONG!";
-        }
-        else
-        {
-            feedbackResultText.text = correct ? "CORRECT!" : "WRONG!";
-        }
-
+        feedbackResultText.text = correct ? "CORRECT!" : "WRONG!";
         feedbackResultText.color = correct ? correctColor : wrongColor;
         explanationText.text = explanation;
-        streakText.text = streak > 1 ? $"🔥 {streak} in a row! +{(streak - 1) * 50} bonus" : "";
+        streakText.text = streakBonus > 0 ? $"{streak} in a row! +{streakBonus} bonus" : "";
     }
 
     void HandleRoundEnd(int finalScore)
