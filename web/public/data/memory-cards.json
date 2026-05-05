@@ -1,0 +1,14 @@
+[
+  { "cardName": "France",      "emoji": "🇫🇷" },
+  { "cardName": "Germany",     "emoji": "🇩🇪" },
+  { "cardName": "Japan",       "emoji": "🇯🇵" },
+  { "cardName": "Italy",       "emoji": "🇮🇹" },
+  { "cardName": "Belgium",     "emoji": "🇧🇪" },
+  { "cardName": "Netherlands", "emoji": "🇳🇱" },
+  { "cardName": "Ireland",     "emoji": "🇮🇪" },
+  { "cardName": "Russia",      "emoji": "🇷🇺" },
+  { "cardName": "Indonesia",   "emoji": "🇮🇩" },
+  { "cardName": "Sweden",      "emoji": "🇸🇪" },
+  { "cardName": "Switzerland", "emoji": "🇨🇭" },
+  { "cardName": "Poland",      "emoji": "🇵🇱" }
+]

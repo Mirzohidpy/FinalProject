@@ -1,0 +1,7 @@
+[
+  { "levelName": "Warm Up",     "operation": "add",      "minOperand": 1,  "maxOperand": 10, "questions": 5, "seconds": 8, "suddenDeath": false },
+  { "levelName": "Subtraction", "operation": "subtract", "minOperand": 1,  "maxOperand": 20, "questions": 5, "seconds": 7, "suddenDeath": false },
+  { "levelName": "Mix It Up",   "operation": "mixAddSub","minOperand": 1,  "maxOperand": 50, "questions": 5, "seconds": 6, "suddenDeath": false },
+  { "levelName": "Times Tables","operation": "multiply", "minOperand": 2,  "maxOperand": 9,  "questions": 5, "seconds": 6, "suddenDeath": false },
+  { "levelName": "Sudden Death","operation": "mixAll",   "minOperand": 1,  "maxOperand": 30, "questions": 5, "seconds": 5, "suddenDeath": true  }
+]

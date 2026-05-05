@@ -1,0 +1,17 @@
+[
+  { "title": "Roman Republic Founded",            "year": -509, "era": "Ancient",     "explanation": "The Roman Republic was established in 509 BCE, replacing the monarchy with elected consuls." },
+  { "title": "Athens Establishes Democracy",      "year": -507, "era": "Ancient",     "explanation": "Cleisthenes introduced democratic reforms in Athens around 507 BCE, creating the world's first democracy." },
+  { "title": "Julius Caesar Assassinated",        "year": -44,  "era": "Ancient",     "explanation": "Julius Caesar was assassinated on the Ides of March, 44 BCE." },
+  { "title": "Fall of Western Roman Empire",      "year": 476,  "era": "Ancient",     "explanation": "The Western Roman Empire collapsed in 476 AD when the last emperor was deposed." },
+  { "title": "Magna Carta Signed",                "year": 1215, "era": "EarlyModern", "explanation": "King John of England signed the Magna Carta in 1215, establishing that the king was subject to the law." },
+  { "title": "Gutenberg's Printing Press",        "year": 1440, "era": "EarlyModern", "explanation": "Gutenberg's printing press (~1440) revolutionized the spread of information and ideas." },
+  { "title": "American Declaration of Independence", "year": 1776, "era": "EarlyModern", "explanation": "The US Declaration of Independence was adopted on July 4, 1776, asserting inalienable rights for all people." },
+  { "title": "French Revolution Begins",          "year": 1789, "era": "EarlyModern", "explanation": "The French Revolution (1789) overthrew the monarchy and established liberty, equality, and fraternity." },
+  { "title": "Abolition of US Slavery",           "year": 1865, "era": "EarlyModern", "explanation": "The 13th Amendment abolished slavery in the United States in 1865, after the Civil War." },
+  { "title": "Women's Suffrage in New Zealand",   "year": 1893, "era": "EarlyModern", "explanation": "New Zealand became the first country to grant women the right to vote in national elections." },
+  { "title": "United Nations Founded",            "year": 1945, "era": "Modern",      "explanation": "The United Nations was founded in 1945 after WWII to promote peace, security, and human rights." },
+  { "title": "Universal Declaration of Human Rights", "year": 1948, "era": "Modern", "explanation": "The UDHR was adopted by the UN on December 10, 1948, proclaiming universal rights for all people." },
+  { "title": "Berlin Wall Falls",                 "year": 1989, "era": "Modern",      "explanation": "The Berlin Wall opened on November 9, 1989, symbolizing the end of the Cold War." },
+  { "title": "South Africa's First Democratic Election", "year": 1994, "era": "Modern", "explanation": "In 1994, South Africa held its first multi-racial democratic election, ending apartheid." },
+  { "title": "Women Vote in Saudi Arabia",        "year": 2015, "era": "Modern",      "explanation": "Saudi women voted and stood as candidates in elections for the first time in December 2015." }
+]

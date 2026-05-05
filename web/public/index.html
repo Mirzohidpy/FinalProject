@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brain Citizen Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Hub nav bar -->
+    <header id="nav-bar" class="hidden">
+      <button id="back-btn" class="btn-icon" title="Back to Hub">&#8592; Hub</button>
+      <span id="nav-title"></span>
+      <span id="nav-score"></span>
+    </header>
+
+    <!-- Main view container -->
+    <div id="view"></div>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast"></div>
+
+  <!-- Embedded game data (works without a server) -->
+  <script src="js/gamedata.js"></script>
+
+  <!-- All game scripts -->
+  <script src="js/games/flagquiz.js"></script>
+  <script src="js/games/truefalsegame.js"></script>
+  <script src="js/games/wordsearch.js"></script>
+  <script src="js/games/emotionid.js"></script>
+  <script src="js/games/mathsprint.js"></script>
+  <script src="js/games/quizshowdown.js"></script>
+  <script src="js/games/mazerunner.js"></script>
+  <script src="js/games/timelinesort.js"></script>
+  <script src="js/games/doppifacts.js"></script>
+  <script src="js/games/memorymatch.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
