@@ -54,9 +54,9 @@ public static class HubSceneBuilder
     {
         new GameSpec( 1, "True or False News",   "TrueFalseNews", "Can you spot the fake headline?",                    true,  GameCategory.CivicAwareness),
         new GameSpec( 2, "Flag Quiz",             "FlagQuiz",      "How well do you know the world's flags?",            true,  GameCategory.CivicAwareness),
-        new GameSpec( 3, "Word Search",           "WordSearch",    "Find the hidden civic vocabulary.",                  false, GameCategory.CivicAwareness),
-        new GameSpec( 4, "Math Sprint",           "MathSprint",    "Think fast, calculate faster.",                      false, GameCategory.MentalSkills),
-        new GameSpec( 5, "Memory Match",          "MemoryMatch",   "Train your working memory.",                         false, GameCategory.MentalSkills),
+        new GameSpec( 3, "Word Search",           "WordSearch",    "Find the hidden civic vocabulary.",                  true,  GameCategory.CivicAwareness),
+        new GameSpec( 4, "Math Sprint",           "MathSprint",    "Think fast, calculate faster.",                      true,  GameCategory.MentalSkills),
+        new GameSpec( 5, "Memory Match",          "MemoryMatch",   "Train your working memory.",                         true,  GameCategory.MentalSkills),
         new GameSpec( 6, "Doppi Facts",           "DoppiFacts",    "Smash the civic facts - miss the myths.",            false, GameCategory.CivicAwareness),
         new GameSpec( 7, "Maze Runner",           "MazeRunner",    "Navigate to the truth - answer to open gates.",      false, GameCategory.MentalSkills),
         new GameSpec( 8, "Emotion Identifier",    "EmotionID",     "Understand how people feel.",                        false, GameCategory.MentalSkills),

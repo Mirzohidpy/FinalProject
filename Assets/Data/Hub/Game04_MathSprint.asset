@@ -17,4 +17,4 @@ MonoBehaviour:
   sceneName: MathSprint
   tagline: Think fast, calculate faster.
   category: 1
-  isImplemented: 0
+  isImplemented: 1

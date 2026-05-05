@@ -14,4 +14,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FlagQuiz.unity
     guid: ead78d92997db44b19a6f23eb79f6fcc
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/WordSearch.unity
+    guid: b6e70cf6fe90e4241914025e07042425
+  - enabled: 1
+    path: Assets/Scenes/MathSprint.unity
+    guid: ea361062dd0904a1997e3f297f8fc090
+  - enabled: 1
+    path: Assets/Scenes/MemoryMatch.unity
+    guid: 4418783eafaa1440f9f8055fb9f95393
+  m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

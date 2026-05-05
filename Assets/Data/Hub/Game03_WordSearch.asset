@@ -17,4 +17,4 @@ MonoBehaviour:
   sceneName: WordSearch
   tagline: Find the hidden civic vocabulary.
   category: 0
-  isImplemented: 0
+  isImplemented: 1
