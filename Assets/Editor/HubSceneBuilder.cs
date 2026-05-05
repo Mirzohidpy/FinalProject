@@ -21,6 +21,12 @@ public static class HubSceneBuilder
     const string DataDir = "Assets/Data/Hub";
     const string RegistryPath = DataDir + "/GameRegistry.asset";
     const string TrueFalseScenePath = "Assets/Scenes/TrueFalseNews.unity";
+    const string FlagQuizScenePath  = "Assets/Scenes/FlagQuiz.unity";
+    const string DoppiFactsScenePath = "Assets/Scenes/DoppiFacts.unity";
+    const string MazeRunnerScenePath = "Assets/Scenes/MazeRunner.unity";
+    const string EmotionIDScenePath  = "Assets/Scenes/EmotionID.unity";
+    const string TimelineSortScenePath = "Assets/Scenes/TimelineSort.unity";
+    const string QuizShowdownScenePath = "Assets/Scenes/QuizShowdown.unity";
 
     static readonly Color NavyBg        = new Color(0.118f, 0.153f, 0.380f); // #1E2761
     static readonly Color NavyBgDark    = new Color(0.063f, 0.082f, 0.220f); // deeper for vignette
@@ -57,11 +63,11 @@ public static class HubSceneBuilder
         new GameSpec( 3, "Word Search",           "WordSearch",    "Find the hidden civic vocabulary.",                  true,  GameCategory.CivicAwareness),
         new GameSpec( 4, "Math Sprint",           "MathSprint",    "Think fast, calculate faster.",                      true,  GameCategory.MentalSkills),
         new GameSpec( 5, "Memory Match",          "MemoryMatch",   "Train your working memory.",                         true,  GameCategory.MentalSkills),
-        new GameSpec( 6, "Doppi Facts",           "DoppiFacts",    "Smash the civic facts - miss the myths.",            false, GameCategory.CivicAwareness),
-        new GameSpec( 7, "Maze Runner",           "MazeRunner",    "Navigate to the truth - answer to open gates.",      false, GameCategory.MentalSkills),
-        new GameSpec( 8, "Emotion Identifier",    "EmotionID",     "Understand how people feel.",                        false, GameCategory.MentalSkills),
-        new GameSpec( 9, "Timeline Sort",         "TimelineSort",  "Put history in the right order.",                    false, GameCategory.CivicAwareness),
-        new GameSpec(10, "Civic Quiz Showdown",   "QuizShowdown",  "The ultimate test - 15 questions, 3 lifelines.",     false, GameCategory.CivicAwareness),
+        new GameSpec( 6, "Doppi Facts",           "DoppiFacts",    "Smash the civic facts - miss the myths.",            true,  GameCategory.CivicAwareness),
+        new GameSpec( 7, "Maze Runner",           "MazeRunner",    "Navigate to the truth - answer to open gates.",      true,  GameCategory.MentalSkills),
+        new GameSpec( 8, "Emotion Identifier",    "EmotionID",     "Understand how people feel.",                        true,  GameCategory.MentalSkills),
+        new GameSpec( 9, "Timeline Sort",         "TimelineSort",  "Put history in the right order.",                    true,  GameCategory.CivicAwareness),
+        new GameSpec(10, "Civic Quiz Showdown",   "QuizShowdown",  "The ultimate test - 15 questions, 3 lifelines.",     true,  GameCategory.CivicAwareness),
     };
 
     [MenuItem("BrainCitizen/Build Hub Scene")]
@@ -411,9 +417,20 @@ public static class HubSceneBuilder
         var existing = new List<EditorBuildSettingsScene>(EditorBuildSettings.scenes);
         existing.RemoveAll(s => s.path == ScenePath);
         existing.Insert(0, new EditorBuildSettingsScene(ScenePath, true));
-        if (File.Exists(TrueFalseScenePath) && !existing.Exists(s => s.path == TrueFalseScenePath))
-            existing.Add(new EditorBuildSettingsScene(TrueFalseScenePath, true));
+        AddIfPresent(existing, TrueFalseScenePath);
+        AddIfPresent(existing, FlagQuizScenePath);
+        AddIfPresent(existing, DoppiFactsScenePath);
+        AddIfPresent(existing, MazeRunnerScenePath);
+        AddIfPresent(existing, EmotionIDScenePath);
+        AddIfPresent(existing, TimelineSortScenePath);
+        AddIfPresent(existing, QuizShowdownScenePath);
         EditorBuildSettings.scenes = existing.ToArray();
+    }
+
+    static void AddIfPresent(List<EditorBuildSettingsScene> list, string path)
+    {
+        if (File.Exists(path) && !list.Exists(s => s.path == path))
+            list.Add(new EditorBuildSettingsScene(path, true));
     }
 
     static void SetPlayModeStartScene()

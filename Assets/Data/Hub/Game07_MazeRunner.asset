@@ -17,4 +17,4 @@ MonoBehaviour:
   sceneName: MazeRunner
   tagline: Navigate to the truth - answer to open gates.
   category: 1
-  isImplemented: 0
+  isImplemented: 1

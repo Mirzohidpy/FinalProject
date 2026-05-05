@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba7dca938fcc46a684679d18f711aa8, type: 3}
+  m_Name: EmotionDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::EmotionDatabase
+  emotions:
+  - {fileID: 11400000, guid: 786e84c474f214386af994f2f7e63d29, type: 2}
+  - {fileID: 11400000, guid: 161a49774a5f34a99b9666801ae7f170, type: 2}
+  - {fileID: 11400000, guid: 7bb4bc33d0c8141ce92519bf63b4595c, type: 2}
+  - {fileID: 11400000, guid: 1dca2f3dbe68f4c2b970d1fb76d7eca2, type: 2}
+  - {fileID: 11400000, guid: 932f4e373f65140a3a0fcf8d2d861daf, type: 2}
+  - {fileID: 11400000, guid: 9e0bf90fb66fb4d418602923588a8dae, type: 2}
+  - {fileID: 11400000, guid: f0f82e9a0971c4951bdd23cef93d7b0e, type: 2}
+  - {fileID: 11400000, guid: 282711426fdb6413fb18714467c4e694, type: 2}
+  - {fileID: 11400000, guid: 501e6cccea89f44bc9434fb1553b0d7f, type: 2}
+  - {fileID: 11400000, guid: 9d8dc24954ef74e5bae56f23c445d6c9, type: 2}
+  - {fileID: 11400000, guid: c9cde640febe74103ad1cef705d16103, type: 2}
+  - {fileID: 11400000, guid: f4e1c74ca0fc147318e5feebb2cfd8e3, type: 2}

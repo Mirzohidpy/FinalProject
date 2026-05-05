@@ -23,5 +23,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MemoryMatch.unity
     guid: 4418783eafaa1440f9f8055fb9f95393
+  - enabled: 1
+    path: Assets/Scenes/DoppiFacts.unity
+    guid: 8b0e3fd6eada2440faba57d5871c4695
+  - enabled: 1
+    path: Assets/Scenes/MazeRunner.unity
+    guid: 36bb50e2d7b6443bda4107ce01781d0a
+  - enabled: 1
+    path: Assets/Scenes/EmotionID.unity
+    guid: b4bdf95c4f511464bb061429980c2d8a
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

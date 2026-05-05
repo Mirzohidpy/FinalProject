@@ -17,4 +17,4 @@ MonoBehaviour:
   sceneName: EmotionID
   tagline: Understand how people feel.
   category: 1
-  isImplemented: 0
+  isImplemented: 1

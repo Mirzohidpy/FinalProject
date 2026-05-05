@@ -17,4 +17,4 @@ MonoBehaviour:
   sceneName: DoppiFacts
   tagline: Smash the civic facts - miss the myths.
   category: 0
-  isImplemented: 0
+  isImplemented: 1

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e0b3d2e81e54c95914ea998e83b7a9, type: 3}
+  m_Name: MazeQuestionDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::MazeQuestionDatabase
+  questions:
+  - {fileID: 11400000, guid: 54218ce36bba84fbfa6aaecfbebb6492, type: 2}
+  - {fileID: 11400000, guid: a7d26d0104fae4b9e9c83b008494efef, type: 2}
+  - {fileID: 11400000, guid: bba820eb84a894b7a9a69d482a861c95, type: 2}
+  - {fileID: 11400000, guid: 6f07818e293954cc092f72aa3f3df802, type: 2}
+  - {fileID: 11400000, guid: f1c094907fcc4443ca1240c5cd07abf3, type: 2}
+  - {fileID: 11400000, guid: 8284832133f4e41c5954aac425b62dfc, type: 2}
+  - {fileID: 11400000, guid: 29f5f1b01b9fc47aebeacbc796af4c38, type: 2}
+  - {fileID: 11400000, guid: 2466515caa8ff4dbd824d358ec063ffc, type: 2}
+  - {fileID: 11400000, guid: bf22e7df8301743df9806bbf2cc1004d, type: 2}
+  - {fileID: 11400000, guid: b7a5bd81cb4cb427498bf83dff9134e1, type: 2}
+  - {fileID: 11400000, guid: 8826ca647ca854f8e9587bb0c389ec87, type: 2}
+  - {fileID: 11400000, guid: e79f6460da9904f2ba10e77cf2d97220, type: 2}
+  - {fileID: 11400000, guid: 6aa3c0436041d4b3bb43d5893db0c337, type: 2}
+  - {fileID: 11400000, guid: 83ab558420e164ae4811599f34b3c964, type: 2}
+  - {fileID: 11400000, guid: e8995b424e63140e0a6a5314c4e7a705, type: 2}
