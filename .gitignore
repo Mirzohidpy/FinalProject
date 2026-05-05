@@ -68,3 +68,11 @@ crashlytics-build.properties
 # OS
 .DS_Store
 Thumbs.db
+
+# Node / web backend
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Generated Unity WebGL build (rebuild via "BrainCitizen → Build WebGL" in Unity)
+web/public/build/

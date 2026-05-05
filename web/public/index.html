@@ -1,41 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#EEF2FF">
   <title>Brain Citizen Academy</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div id="app">
-    <!-- Hub nav bar -->
-    <header id="nav-bar" class="hidden">
-      <button id="back-btn" class="btn-icon" title="Back to Hub">&#8592; Hub</button>
-      <span id="nav-title"></span>
-      <span id="nav-score"></span>
-    </header>
+  <header class="hero">
+    <div class="hero__inner">
+      <h1 class="hero__title">Brain <span>Citizen</span> Academy</h1>
+      <p class="hero__tagline">Ten short educational mini-games — geography, civics, math, language, and logic.<br>Built in Unity 6, hosted on the web.</p>
+      <a class="hero__cta" href="play.html">Play now</a>
+    </div>
+  </header>
 
-    <!-- Main view container -->
-    <div id="view"></div>
-  </div>
+  <main class="container">
+    <section class="games" aria-labelledby="games-heading">
+      <h2 id="games-heading">Ten games included</h2>
+      <p class="section-sub">Pick a game in the in-game hub. Some are still being built — those cards stay locked.</p>
+      <ul class="cards">
+        <li class="card card--rose">
+          <div class="card__badge">T</div>
+          <div class="card__body">
+            <p class="card__category">Civics</p>
+            <h3 class="card__title">True or False News</h3>
+            <p class="card__tagline">Read a headline. Decide if it's real or fabricated. Sources shown after each answer.</p>
+            <a class="card__cta" href="play.html#true-false-news">Play →</a>
+          </div>
+        </li>
+        <li class="card card--indigo">
+          <div class="card__badge">F</div>
+          <div class="card__body">
+            <p class="card__category">Geography</p>
+            <h3 class="card__title">Flag Quiz</h3>
+            <p class="card__tagline">Identify 30 flags across three difficulty tiers. Same-tier distractors keep it honest.</p>
+            <a class="card__cta" href="play.html#flag-quiz">Play →</a>
+          </div>
+        </li>
+        <li class="card card--emerald">
+          <div class="card__badge">W</div>
+          <div class="card__body">
+            <p class="card__category">Language</p>
+            <h3 class="card__title">Word Search</h3>
+            <p class="card__tagline">Find hidden words on a letter grid. Themes rotate by category.</p>
+            <a class="card__cta" href="play.html#word-search">Play →</a>
+          </div>
+        </li>
+        <li class="card card--amber">
+          <div class="card__badge">E</div>
+          <div class="card__body">
+            <p class="card__category">Social</p>
+            <h3 class="card__title">Emotion ID</h3>
+            <p class="card__tagline">Match facial expressions to emotion labels. Brief explanation on each result.</p>
+            <a class="card__cta" href="play.html#emotion-id">Play →</a>
+          </div>
+        </li>
+        <li class="card card--sky">
+          <div class="card__badge">M</div>
+          <div class="card__body">
+            <p class="card__category">Math</p>
+            <h3 class="card__title">Math Sprint</h3>
+            <p class="card__tagline">Quick arithmetic against a timer. Difficulty ramps with streak length.</p>
+            <a class="card__cta" href="play.html#math-sprint">Play →</a>
+          </div>
+        </li>
+        <li class="card card--violet">
+          <div class="card__badge">Q</div>
+          <div class="card__body">
+            <p class="card__category">Civics</p>
+            <h3 class="card__title">Quiz Showdown</h3>
+            <p class="card__tagline">Multiple-choice civic knowledge questions. One round, ten questions, four categories.</p>
+            <a class="card__cta" href="play.html#civic-quiz">Play →</a>
+          </div>
+        </li>
+        <li class="card card--teal">
+          <div class="card__badge">Z</div>
+          <div class="card__body">
+            <p class="card__category">Logic</p>
+            <h3 class="card__title">Maze Runner</h3>
+            <p class="card__tagline">Navigate a maze and answer a question at every checkpoint.</p>
+            <a class="card__cta" href="play.html#maze-runner">Play →</a>
+          </div>
+        </li>
+        <li class="card card--orange">
+          <div class="card__badge">L</div>
+          <div class="card__body">
+            <p class="card__category">History</p>
+            <h3 class="card__title">Timeline Sort</h3>
+            <p class="card__tagline">Drag historical events into chronological order. Three lives, three rounds.</p>
+            <a class="card__cta" href="play.html#timeline-sort">Play →</a>
+          </div>
+        </li>
+        <li class="card card--lime">
+          <div class="card__badge">D</div>
+          <div class="card__body">
+            <p class="card__category">Civics</p>
+            <h3 class="card__title">Doppi Facts</h3>
+            <p class="card__tagline">Spot the fake claim among three real ones. Misinformation literacy in 90 seconds.</p>
+            <a class="card__cta" href="play.html#doppi-facts">Play →</a>
+          </div>
+        </li>
+        <li class="card card--pink">
+          <div class="card__badge">R</div>
+          <div class="card__body">
+            <p class="card__category">Memory</p>
+            <h3 class="card__title">Memory Match</h3>
+            <p class="card__tagline">Flip cards two at a time and remember. Six pairs, time-attack scoring.</p>
+            <a class="card__cta" href="play.html#memory-match">Play →</a>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  <!-- Toast notification -->
-  <div id="toast"></div>
+    <section class="leaderboard" aria-labelledby="leaderboard-heading">
+      <h2 id="leaderboard-heading">Top players this week</h2>
+      <p class="section-sub">Updated by the dev backend — placeholder data while the points engine is wired up.</p>
+      <ol id="leaderboard-list" class="leaderboard-list" aria-live="polite">
+        <li class="leaderboard-item placeholder">Loading…</li>
+      </ol>
+    </section>
 
-  <!-- Embedded game data (works without a server) -->
-  <script src="js/gamedata.js"></script>
+    <section class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>
+        Brain Citizen Academy is a Unity 6 hub-and-spoke educational game built for SE203 Game Development at New Uzbekistan University.
+        The hub launches ten short mini-games covering civics, geography, math, language, logic, and memory.
+      </p>
+      <p class="muted">
+        Flag images © <a href="https://flagcdn.com/">flagcdn.com</a>. Headline data references public sources (UN, WHO, NASA, BBC) for the True/False game.
+      </p>
+    </section>
+  </main>
 
-  <!-- All game scripts -->
-  <script src="js/games/flagquiz.js"></script>
-  <script src="js/games/truefalsegame.js"></script>
-  <script src="js/games/wordsearch.js"></script>
-  <script src="js/games/emotionid.js"></script>
-  <script src="js/games/mathsprint.js"></script>
-  <script src="js/games/quizshowdown.js"></script>
-  <script src="js/games/mazerunner.js"></script>
-  <script src="js/games/timelinesort.js"></script>
-  <script src="js/games/doppifacts.js"></script>
-  <script src="js/games/memorymatch.js"></script>
+  <footer class="site-footer">
+    <p>Brain Citizen Academy &middot; <a href="https://github.com/Mirzohidpy/FinalProject">GitHub</a> &middot; New Uzbekistan University, 2026</p>
+  </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

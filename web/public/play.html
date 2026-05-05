@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1B1230">
+  <title>Brain Citizen Academy — Play</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { margin: 0; background: #1B1230; }
+    .play-shell { position: fixed; inset: 0; display: flex; flex-direction: column; }
+    .play-bar {
+      flex: 0 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px;
+      background: #2A1B47; color: #EEF2FF;
+      font-size: 14px;
+    }
+    .play-bar a { color: #EEF2FF; text-decoration: none; opacity: 0.9; }
+    .play-bar a:hover { text-decoration: underline; opacity: 1; }
+    .play-frame {
+      flex: 1 1 auto;
+      width: 100%;
+      border: 0;
+      background: #000;
+    }
+    .build-missing {
+      flex: 1 1 auto;
+      display: flex; align-items: center; justify-content: center;
+      padding: 40px;
+      color: #EEF2FF;
+    }
+    .build-missing__inner {
+      max-width: 640px; line-height: 1.6;
+      background: #2A1B47; padding: 32px; border-radius: 12px;
+    }
+    .build-missing code {
+      background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;
+      font-family: ui-monospace, SF Mono, Menlo, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="play-shell">
+    <div class="play-bar">
+      <a href="index.html">&larr; Back to portal</a>
+      <span>Brain Citizen Academy</span>
+    </div>
+    <iframe
+      id="play-frame"
+      class="play-frame"
+      src="build/braincitizen/index.html"
+      title="Brain Citizen Academy"
+      allow="autoplay; fullscreen"
+    ></iframe>
+    <div id="build-missing" class="build-missing" style="display:none;">
+      <div class="build-missing__inner">
+        <h2>WebGL build not found</h2>
+        <p>The Unity WebGL artifact isn't at <code>web/public/build/braincitizen/</code> yet.</p>
+        <p>To build it:</p>
+        <ol>
+          <li>Open the Unity project at the repo root in Unity Hub (version <code>6000.4.5f1</code>)</li>
+          <li>Menu: <code>BrainCitizen → Build WebGL</code></li>
+          <li>Reload this page</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    fetch('build/braincitizen/index.html', { method: 'HEAD' })
+      .then(r => { if (!r.ok) throw new Error('Build not found'); })
+      .catch(() => {
+        document.getElementById('play-frame').style.display = 'none';
+        document.getElementById('build-missing').style.display = 'flex';
+      });
+  </script>
+</body>
+</html>
